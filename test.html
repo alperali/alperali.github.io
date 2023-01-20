@@ -13,7 +13,7 @@
       console.log(`error ev: ${e}`);
     });
     bağ.addEventListener('close', e => {
-      console.log(`close ev: ${e}`);
+      console.log(`close ev: ${e.code}, ${e.reason}, temiz: ${e.wasClean}`);
     });
     bağ.addEventListener('open', e => {
       console.log(`proto: ${bağ.protocol}`);
@@ -22,7 +22,7 @@
     setTimeout(() => {
       console.log('kapatılıyor...');
       bağ.close();
-    }, 10000);
+    }, 5000);
   </script>
 </body>
 </html>
