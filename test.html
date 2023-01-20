@@ -6,12 +6,12 @@
   <title>sınama</title>
 </head>
 <body>
-  <p>bağ sına</p>
+  <p>bağ sına 6</p>
   <script type="module">
     let bağ=new WebSocket('wss://tracker.openwebtorrent.com');
     bağ.addEventListener('open', e => {
       console.log(`proto: ${bağ.protocol}`);
-      // bağ.send('test msg ğüışçİĞŞ');
+      bağ.send('test msg ğüışçİĞŞ');
     });
     bağ.addEventListener('error', e => {
       console.log(`error ev: ${e}`);
